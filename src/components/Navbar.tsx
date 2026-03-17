@@ -23,15 +23,26 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <span className="font-serif text-xl text-[#0A0A0A]">
-          Lovre Lonić
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="font-serif text-xl text-[#0A0A0A]">
+            Lovre Lonić
+          </span>
+          <span className="hidden md:inline-flex items-center gap-1.5 border border-[#4A6FA5]/30 rounded-full px-2.5 py-1 bg-[#4A6FA5]/5">
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-[#4A6FA5] flex-shrink-0"
+              style={{ animation: "dot-pulse 2s ease-in-out infinite" }}
+            />
+            <span style={{ fontSize: "0.7rem" }} className="text-[#4A6FA5] font-medium whitespace-nowrap leading-none">
+              Currently available for new clients
+            </span>
+          </span>
+        </div>
         <div className="hidden md:flex items-center gap-8">
           {["About", "Work", "Services", "Case Studies", "Process", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="text-sm text-[#737373] hover:text-[#F43F5E] transition-colors duration-200"
+              className="text-sm text-[#737373] hover:text-[#0A0A0A] transition-colors duration-200"
             >
               {item}
             </a>
@@ -39,7 +50,7 @@ export default function Navbar() {
         </div>
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-[#F43F5E] text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#E11D48] transition-all duration-200 hover:shadow-lg hover:shadow-[#F43F5E]/25"
+          className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white text-sm font-medium px-4 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-[#262626] transition-all duration-200 hover:shadow-lg hover:shadow-black/20"
         >
           Book a Call
         </a>

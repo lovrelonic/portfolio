@@ -16,7 +16,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-xs font-medium tracking-widest uppercase text-[#F43F5E]">
+          <span className="text-xs font-medium tracking-widest uppercase text-[#4A6FA5]">
             About
           </span>
         </motion.div>

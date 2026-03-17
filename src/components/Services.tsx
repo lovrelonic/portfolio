@@ -2,45 +2,31 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Settings, Workflow, BarChart2, Users, RefreshCw, FlaskConical } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 
-const services: { icon: LucideIcon; title: string; desc: string; highlights: string[] }[] = [
+const services = [
   {
-    icon: Settings,
     title: "Klaviyo Setup & Migration",
     desc: "Full platform setup, ESP migration, and technical integration with your Shopify store. Get your foundation right from day one.",
-    highlights: ["DNS & deliverability setup", "Shopify deep integration", "Historical data migration"],
   },
   {
-    icon: Workflow,
     title: "Email Flow Automation",
-    desc: "Build high-converting automated flows — welcome series, abandoned cart, post-purchase, win-back, and browse abandonment.",
-    highlights: ["Welcome & nurture sequences", "Cart & checkout recovery", "Post-purchase upsells"],
+    desc: "Welcome series, abandoned cart, post-purchase, win-back, and browse abandonment — built to convert.",
   },
   {
-    icon: BarChart2,
     title: "Campaign Strategy & Execution",
-    desc: "Monthly campaign calendars, copywriting, design direction, and full send management tailored to your brand voice.",
-    highlights: ["Promotional calendars", "Segment-targeted sends", "Launch & sale campaigns"],
+    desc: "Monthly campaign calendars, copywriting, design direction, and full send management tailored to your brand.",
   },
   {
-    icon: Users,
     title: "List Growth & Segmentation",
-    desc: "Pop-up optimization, lead magnet strategy, and advanced segmentation to send the right message to the right person.",
-    highlights: ["Pop-up & form CRO", "RFM segmentation", "Predictive analytics"],
+    desc: "Pop-up optimization, lead magnet strategy, and advanced segmentation to reach the right person every time.",
   },
   {
-    icon: RefreshCw,
     title: "Lifecycle & Retention Marketing",
-    desc: "Full customer lifecycle strategy to maximize LTV — from first purchase through loyal advocate, with VIP and loyalty programs.",
-    highlights: ["LTV optimization", "VIP tier programs", "Churn prevention flows"],
+    desc: "Full customer lifecycle strategy to maximize LTV — from first purchase through loyal advocate.",
   },
   {
-    icon: FlaskConical,
     title: "A/B Testing & Optimization",
-    desc: "Systematic testing of subject lines, send times, content, and flows to continuously improve performance and revenue.",
-    highlights: ["Subject line testing", "Send time optimization", "Flow split testing"],
+    desc: "Systematic testing of subject lines, send times, content, and flows to continuously improve performance.",
   },
 ];
 
@@ -49,15 +35,15 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto" ref={ref}>
+    <section id="services" className="py-24 bg-white" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-xs font-medium tracking-widest uppercase text-[#F43F5E]">
+          <span className="text-xs font-medium tracking-widest uppercase text-[#4A6FA5]">
             Services
           </span>
         </motion.div>
@@ -65,42 +51,39 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-serif text-4xl md:text-5xl text-[#0A0A0A] mb-4 max-w-2xl leading-tight"
+          className="font-serif text-4xl md:text-5xl text-[#0A0A0A] mb-16 leading-tight"
         >
-          Everything Your Email Program Needs
+          What I Do
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-[#737373] text-lg mb-14 max-w-xl"
-        >
-          End-to-end Klaviyo services designed to turn your email list into a revenue engine.
-        </motion.p>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.07 }}
-              className="bg-[#F5F5F5] rounded-2xl p-6 border border-[#E5E5E5] hover:border-[#F43F5E] transition-all duration-300 group"
+      <div className="max-w-6xl mx-auto px-6 border-t border-[#E5E5E5]">
+        {services.map((s, i) => (
+          <motion.div
+            key={s.title}
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.15 + i * 0.07 }}
+            className="group flex items-start gap-8 md:gap-16 py-8 border-b border-[#E5E5E5] hover:bg-[#F5F5F5] transition-colors duration-300 px-4 -mx-4 cursor-default"
+          >
+            {/* Number */}
+            <span className="font-serif text-[#CCCCCC] text-2xl w-10 flex-shrink-0 pt-1 select-none">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+
+            {/* Service name */}
+            <h3
+              className="font-serif text-2xl md:text-3xl text-[#0A0A0A] flex-1 leading-tight transition-transform duration-300 group-hover:translate-x-[5px]"
             >
-              <s.icon size={20} className="mb-4 text-[#0A0A0A] group-hover:text-[#F43F5E] transition-colors duration-300" />
-              <h3 className="font-serif text-xl text-[#0A0A0A] mb-3">{s.title}</h3>
-              <p className="text-[#737373] text-sm leading-relaxed mb-4">{s.desc}</p>
-              <ul className="space-y-1.5">
-                {s.highlights.map((h) => (
-                  <li key={h} className="flex items-center gap-2 text-xs text-[#737373]">
-                    <span className="w-1 h-1 rounded-full bg-[#F43F5E] flex-shrink-0" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+              {s.title}
+            </h3>
+
+            {/* Description */}
+            <p className="hidden md:block text-[#737373] text-sm leading-relaxed max-w-xs flex-shrink-0 pt-1">
+              {s.desc}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
