@@ -49,7 +49,9 @@ export default function Navbar() {
           ))}
         </div>
         <a
-          href="#contact"
+          href="https://calendly.com/lovre-lovrelonic/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white text-sm font-medium px-4 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-[#262626] transition-all duration-200 hover:shadow-lg hover:shadow-black/20"
         >
           Book a Call

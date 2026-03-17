@@ -17,7 +17,9 @@ export default function CtaBanner({ text, label }: { text: string; label: string
       >
         <p className="font-serif text-2xl md:text-3xl text-[#0A0A0A]">{text}</p>
         <a
-          href="#contact"
+          href="https://calendly.com/lovre-lovrelonic/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white text-sm font-medium px-6 py-3.5 hover:bg-[#262626] transition-colors duration-200 whitespace-nowrap"
         >
           {label}

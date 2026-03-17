@@ -86,7 +86,9 @@ export default function Hero() {
           className="mb-16"
         >
           <a
-            href="#contact"
+            href="https://calendly.com/lovre-lovrelonic/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white text-sm font-medium px-7 py-4 hover:bg-[#262626] transition-colors duration-200"
           >
             Book a Free Audit →
