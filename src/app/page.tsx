@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Work from "@/components/Work";
 import CtaBanner from "@/components/CtaBanner";
 import Services from "@/components/Services";
-import CaseStudies from "@/components/CaseStudies";
+import Approach from "@/components/Approach";
 import Process from "@/components/Process";
 import Tools from "@/components/Tools";
 import Contact from "@/components/Contact";
@@ -17,7 +17,7 @@ export default function Home() {
       <Work />
       <CtaBanner text="Like what you see? Let's build yours." label="Book a Free Audit →" />
       <Services />
-      <CaseStudies />
+      <Approach />
       <CtaBanner text="Want results like these?" label="Book a Strategy Call →" />
       <Process />
       <CtaBanner text="Ready to get started?" label="Book a Free Audit →" />
