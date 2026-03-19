@@ -7,10 +7,10 @@ import Image from "next/image";
 const allCards = [
   { brand: "Velora Skincare", tag: "Welcome Flow",  src: "/email 2.png" },
   { brand: "PULSE+",          tag: "Abandoned Cart", src: "/ABANDONED CART 2.png" },
+  { brand: "Orvid Coffee",    tag: "Campaign",       src: "/orvid_coffee.png" },
   { brand: "LUMĒ",            tag: "Campaign",       src: null },
   { brand: "APEX",            tag: "Post-Purchase",  src: null },
   { brand: "VØID",            tag: "Win-Back Flow",  src: null },
-  { brand: "Brand 06",        tag: "Campaign",       src: null },
 ];
 
 // Column 1: original order. Column 2: offset for visual variety
