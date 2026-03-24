@@ -210,14 +210,15 @@ export default function Work() {
         {/* Bento — desktop */}
         <div
           className="hidden md:grid gap-2"
-          style={{ gridTemplateColumns: "repeat(3, 1fr)", gridTemplateRows: "320px 320px 220px" }}
+          style={{ gridTemplateColumns: "repeat(3, 1fr)", gridTemplateRows: "400px 400px" }}
         >
-          <BentoCard card={cards[0]} index={0} isInView={isInView} style={{ gridColumn: "1 / 3", gridRow: "1 / 3" }} onOpen={() => setSelected(cards[0])} />
+          {/* Row 1 */}
+          <BentoCard card={cards[0]} index={0} isInView={isInView} style={{ gridColumn: "1 / 3" }} onOpen={() => setSelected(cards[0])} />
           <BentoCard card={cards[1]} index={1} isInView={isInView} onOpen={() => setSelected(cards[1])} />
+          {/* Row 2 */}
           <BentoCard card={cards[2]} index={2} isInView={isInView} onOpen={() => setSelected(cards[2])} />
           <BentoCard card={cards[3]} index={3} isInView={isInView} onOpen={() => setSelected(cards[3])} />
           <BentoCard card={cards[4]} index={4} isInView={isInView} onOpen={() => setSelected(cards[4])} />
-          <BentoCard card={cards[5]} index={5} isInView={isInView} onOpen={() => setSelected(cards[5])} />
         </div>
 
         {/* Mobile */}
