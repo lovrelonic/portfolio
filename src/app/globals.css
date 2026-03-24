@@ -31,12 +31,3 @@ body {
   50% { box-shadow: 0 0 0 5px rgba(74, 111, 165, 0); }
 }
 
-@keyframes scroll-up {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-50%); }
-}
-
-@keyframes scroll-down {
-  from { transform: translateY(-50%); }
-  to   { transform: translateY(0); }
-}
